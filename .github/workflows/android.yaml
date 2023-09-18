@@ -44,11 +44,6 @@ jobs:
           name: app-release
           path: app-release
 
-      - name: Configurar Git
-        run: |
-          git config --global user.email "you@example.com"
-          git config --global user.name "GitHub Actions"
-
       - name: Adicionar e commit APK
         run: |
           git add app-release
