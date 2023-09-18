@@ -17,6 +17,10 @@ jobs:
         uses: actions/setup-java@v3.12.0
         with:
           java-version: 1.8
+      - name: Configurar Git
+        run: |
+          git config --global user.email "99508668+Matheus-TestUser1@users.noreply.github.com"
+          git config --global user.name "Matheus-TestUser1"
 
       - name: Build APK
         run: ./gradlew assembleRelease
