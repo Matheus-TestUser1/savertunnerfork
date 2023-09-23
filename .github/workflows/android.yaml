@@ -41,7 +41,8 @@ jobs:
           git add app-release
           git commit -m "Adicionar APK de release"
         
-      - name: Fazer push do APK para o GitHub
-        uses: ad-m/github-push-action@v0.6
-        with:
-          branch: main # Altere para a branch desejada
+      - name: Release APK
+     uses: ShowMeThe/github_action_release@v0.01
+  with:
+    # Github secret token to allow automated publishing of APK to release.
+    GITHUB_TOKEN: # optional
