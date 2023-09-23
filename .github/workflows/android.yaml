@@ -27,11 +27,6 @@ jobs:
           name: app-release
           path: app/build/outputs/apk/release/app-release.apk
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Checkout código
         uses: actions/checkout@v2
 
@@ -40,12 +35,7 @@ jobs:
         with:
           name: app-release
           path: app-release
-
-      - name: Configurar Git
-        run: |
-          git config --global user.email "99508668+Matheus-TestUser1@users.noreply.github.com"
-          git config --global user.name "Matheus-TestUser1"
-
+          
       - name: Adicionar e commit APK
         run: |
           git add app-release
